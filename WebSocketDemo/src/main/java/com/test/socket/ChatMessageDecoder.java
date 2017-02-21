@@ -13,11 +13,11 @@ public class ChatMessageDecoder implements Decoder.Text<ChatMessage> {
 	@Override
 	public void init(final EndpointConfig config) {
 	}
- 
+
 	@Override
 	public void destroy() {
 	}
- 
+
 	@Override
 	public ChatMessage decode(final String textMessage) throws DecodeException {
 		ChatMessage chatMessage = new ChatMessage();
@@ -28,7 +28,7 @@ public class ChatMessageDecoder implements Decoder.Text<ChatMessage> {
 		chatMessage.setReceived(new Date());
 		return chatMessage;
 	}
- 
+
 	@Override
 	public boolean willDecode(final String s) {
 		return true;

@@ -14,13 +14,13 @@ import javax.websocket.server.ServerEndpoint;
 @ServerEndpoint(value = "/chat/{room}", encoders = ChatMessageEncoder.class, decoders = ChatMessageDecoder.class)
 public class ChatEndpoint {
 	private final Logger log = Logger.getLogger(getClass().getName());
- 
+
 	@OnOpen
 	public void open(final Session session, @PathParam("room") final String room) {
 		log.info("session openend and bound to room: " + room);
 		session.getUserProperties().put("room", room);
 	}
- 
+
 	@OnMessage
 	public void onMessage(final Session session, final ChatMessage chatMessage) {
 		String room = (String) session.getUserProperties().get("room");

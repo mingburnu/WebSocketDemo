@@ -9,11 +9,11 @@ public class ChatMessageEncoder implements Encoder.Text<ChatMessage> {
 	@Override
 	public void init(final EndpointConfig config) {
 	}
- 
+
 	@Override
 	public void destroy() {
 	}
- 
+
 	@Override
 	public String encode(final ChatMessage chatMessage) throws EncodeException {
 		return Json.createObjectBuilder()

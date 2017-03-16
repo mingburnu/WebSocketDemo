@@ -20,7 +20,7 @@
 			<artifactId>tools</artifactId>
 			<version>${java-version}</version>
 			<scope>system</scope>
-			<systemPath>${JAVA_HOME}/lib/tools.jar</systemPath>
+			<systemPath>${env.JAVA_HOME}/lib/tools.jar</systemPath>
 		</dependency>
 
 		<!-- javax.json -->
@@ -88,4 +88,9 @@
 
 		</plugins>
 	</build>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<java-version>1.7</java-version>
+	</properties>
 </project>
